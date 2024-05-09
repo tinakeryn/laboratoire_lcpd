@@ -86,7 +86,8 @@ main #test-result-body #identity {
   justify-content: center;
   font-size: 18px;
 }
-main #test-result-body #drugTest #resultDrugName {
+main #test-result-body #drugTest #resultDrugName,
+main #test-result-body #drugTest #drugPurity {
   text-align: center;
   font-size: 22px;
 }

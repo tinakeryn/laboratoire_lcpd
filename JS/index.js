@@ -198,13 +198,13 @@ const creerGraphique = (nomDrogue) => {
     crack: (Math.random() * (5 - 2) + 2).toFixed(2),
     ecstasy: (Math.random() * (5 - 2) + 2).toFixed(2),
     héroïne: (Math.random() * (5 - 2) + 2).toFixed(2),
-    méthamphétamines: (Math.random() * (5 - 2) + 2).toFixed(2),
+    opium: (Math.random() * (5 - 2) + 2).toFixed(2),
   };
 
   dosages[nomDrogue] = (Math.random() * (100 - 20) + 20).toFixed(2); // Dosage aléatoire entre 20% et 100% pour la drogue identifiée
 
   const chartData = {
-    labels: ["Cannabis", "Cocaïne", "Crack", "Ecstasy", "Héroïne", "Méthamphétamines"],
+    labels: ["Cannabis", "Cocaïne", "Crack", "Ecstasy", "Héroïne", "Opium"],
     datasets: [
       {
         label: "Pureté (%)",
@@ -249,6 +249,12 @@ const creerGraphique = (nomDrogue) => {
       },
     },
   });
+
+  // Afficher la pureté de l'échantillon dans le paragraphe avec l'ID 'drugPurity'
+  document.getElementById(
+    "drugPurity"
+  ).innerHTML = `Pureté de l'échantillon : <b>${dosages[nomDrogue]}%</b>`;
+  console.log(dosages);
 };
 
 formButton.addEventListener("click", (event) => {

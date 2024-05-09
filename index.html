@@ -45,14 +45,11 @@
           <select name="drugname" id="drugname" required>
             <option value="" selected disabled>Sélectionner une drogue</option>
             <option value="cannabis">Weed</option>
-            <option value="cocaïne">Coke</option>
-            <option value="méthamphétamines">Meth</option>
-            <!-- <option value="cannabis">Cannabis</option> -->
-            <!-- <option value="héroïne">Héroïne</option> -->
-            <!-- <option value="cocaïne">Cocaïne</option> -->
-            <!-- <option value="crack">Crack</option> -->
-            <!-- <option value="ecstasy">Ecstasy</option> -->
-            <!-- <option value="méthamphétamines">Méthamphétamines</option> -->
+            <option value="cocaïne">Cocaïne</option>
+            <option value="crack">Crack</option>
+            <option value="ecstasy">Ecstasy</option>
+            <option value="héroïne">Héroïne</option>
+            <option value="opium">Opium</option>
           </select>
           <br />
           <label for="drugquantity">Quantité de la substance</label> :
@@ -84,6 +81,7 @@
           </div>
           <div id="drugTest">
             <p id="resultDrugName"></p>
+            <p id="drugPurity"></p>
           </div>
           <canvas id="graphiqueDosages" width="400" height="200"></canvas>
         </div>

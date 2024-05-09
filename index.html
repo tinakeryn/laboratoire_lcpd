@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Laboratoire d'analyses du LSPD - ©TinyNerak" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" href="./style/Images/icon.png" />
+    <script src="https://kit.fontawesome.com/173443c88a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+    </style>
+    <title>Accueil</title>
+  </head>
+  <body>
+    <header><h1>Laboratoire délocalisé</h1></header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Identité de l'agent</legend>
+          <label for="matricule">Votre matricule</label> :
+          <input
+            type="number"
+            min="1"
+            max="99"
+            name="matricule"
+            id="matricule"
+            autofocus
+            placeholder="Matricule"
+            required
+          />
+          <br />
+          <label for="firstname">Votre prénom</label> :
+          <input type="text" name="firstname" id="firstname" placeholder="Prénom" required />
+          <br />
+          <label for="lastname">Votre nom</label> :
+          <input type="text" name="name" id="lastname" placeholder="Nom" required />
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend>Analyser une substance suspecte</legend>
+          <label for="drugname">Nom de la substance</label> :
+          <select name="drugname" id="drugname" required>
+            <option value="" selected disabled>Sélectionner une drogue</option>
+            <option value="cannabis">Weed</option>
+            <option value="cocaïne">Coke</option>
+            <option value="méthamphétamines">Meth</option>
+            <!-- <option value="cannabis">Cannabis</option> -->
+            <!-- <option value="héroïne">Héroïne</option> -->
+            <!-- <option value="cocaïne">Cocaïne</option> -->
+            <!-- <option value="crack">Crack</option> -->
+            <!-- <option value="ecstasy">Ecstasy</option> -->
+            <!-- <option value="méthamphétamines">Méthamphétamines</option> -->
+          </select>
+          <br />
+          <label for="drugquantity">Quantité de la substance</label> :
+          <input type="number" name="drugquantity" min="0" id="drugquantity" required />
+          <br />
+        </fieldset>
+        <!-- <fieldset>
+          <legend>Analyser de l'argent</legend>
+          <label for="clean">Quantité d'argent propre</label> :
+          <input type="number" name="clean" id="clean" min="0" value="0" />
+          <br />
+          <label for="dirty">Quantité d'argent sale</label> :
+          <input type="number" name="dirty" id="dirty" min="0" value="0" />
+          <br />
+        </fieldset> -->
+        <button id="form-button">Envoyer</button>
+        <input type="reset" value="Réinitialiser" id="reset" />
+      </form>
+      <button id="convertBtn">Générer et télécharger l'image</button>
+      <section id="test-result">
+        <div id="test-result-header">
+          <h2>Rapport d'analyse</h2>
+          <hr />
+        </div>
+        <div id="test-result-body">
+          <div id="identity">
+            <p><b>Identité de l'agent : </b><span id="agentFullname">Prénom Nom</span></p>
+            <p><b>Matricule de l'agent : </b><span id="agentId">Matricule</span></p>
+          </div>
+          <div id="drugTest">
+            <p id="resultDrugName"></p>
+          </div>
+          <canvas id="graphiqueDosages" width="400" height="200"></canvas>
+        </div>
+        <img src="./style/Images/Logo.png" alt="logo du pôle médico-légal" id="test-result-logo" />
+      </section>
+    </main>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>

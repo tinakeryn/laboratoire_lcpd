@@ -1,0 +1,26 @@
+@import "../Utils/mixins";
+@import "../Utils/variables";
+
+* {
+  color: $text;
+}
+
+h1 {
+  color: $sept;
+}
+form {
+  fieldset,
+  input {
+    color: $cinq;
+    select {
+      color: $cinq;
+      option {
+        color: $cinq;
+      }
+    }
+  }
+}
+
+#test-result {
+  font-family: "Inconsolata", monospace;
+}

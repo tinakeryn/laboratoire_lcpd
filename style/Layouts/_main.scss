@@ -1,0 +1,83 @@
+@import "../Utils/mixins";
+@import "../Utils/variables";
+
+main {
+  form {
+    width: 800px;
+    margin: auto;
+    fieldset {
+      border-color: $border;
+      margin-bottom: 20px;
+      legend {
+        background-color: $quatre;
+        font-weight: bold;
+        border: 1px solid $border;
+        padding: 5px;
+      }
+      label {
+        margin-bottom: 10px;
+      }
+      input {
+        margin-top: 10px;
+        width: 150px;
+      }
+    }
+  }
+  #test-result {
+    display: none;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    width: 700px;
+    height: 950px;
+    * {
+      color: black;
+    }
+    &-header {
+      h2,
+      h3 {
+        text-align: center;
+      }
+      h2 {
+        padding-top: 20px;
+        color: black;
+        font-size: 30px;
+      }
+      hr {
+        border: 1mm solid $deux;
+      }
+    }
+    &-body {
+      #identity {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 20px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      #drugTest {
+        #resultDrugName {
+          text-align: center;
+          font-size: 22px;
+        }
+      }
+      #graphiqueDosages {
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 20px;
+      }
+    }
+    &-logo {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  #convertBtn {
+    display: none;
+    margin: auto;
+  }
+}
